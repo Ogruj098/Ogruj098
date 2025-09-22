@@ -1,0 +1,15 @@
+import requests
+
+apiUrl = "https://api.1inch.dev/fusion/orders/v2.0/1/order/active"
+headers = {
+    "Authorization": "Bearer e13pKiMDL0RkgsJ8ftnrUiZ4L2L75ct8"
+}
+params = {
+    "page": 1,
+    "limit": 100,
+    "version": "2.0"
+}
+
+response = requests.get(apiUrl, headers=headers, params=params)
+
+print(response.json())
